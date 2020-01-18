@@ -43215,3 +43215,52 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 117ms (Views: 106.4ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/" for 10.0.2.2 at 2020-01-18 05:38:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by MainsController#top as HTML
+  Rendering mains/top.html.erb within layouts/application
+  Rendered mains/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 366ms (Views: 355.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-01-18 05:38:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:17
+  Rendered layouts/_error_messages.html.erb (1.3ms)
+  Rendered books/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 137ms (Views: 94.6ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-01-18 05:38:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/C1mr+Nc0De5wZ0kpwYCKTxuZplegHSo8Gr0BBYtG4Yn//JVEjh5ePlrNAMWObq3jVeVFMjmDt1OFWRCMkJHrA==", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/books_controller.rb:15
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:17
+  Rendered layouts/_error_messages.html.erb (1.1ms)
+  Rendered books/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 130ms (Views: 86.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/books/165/edit" for 10.0.2.2 at 2020-01-18 05:38:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"165"}
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 165], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:24
+  Rendering books/edit.html.erb within layouts/application
+  Rendered layouts/_error_messages.html.erb (0.6ms)
+  Rendered books/edit.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 131ms (Views: 116.1ms | ActiveRecord: 1.6ms)
+
+
