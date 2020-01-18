@@ -1,0 +1,23 @@
+// Place all the styles related to the mains controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top {
+  margin: 33px;
+  text-align:left;
+}
+
+.text {
+  margin: 33px;
+  line-height: 33px;
+}
+
+.link {
+  margin: 33px;
+}
